@@ -8,7 +8,7 @@
     <p>Peminjaman</p>
 </div>
 
-<form action="<?= base_url('admin/peminjaman/update/' . $peminjaman['id_peminjaman']) ?>" method="post">
+<form action="<?= base_url('admin/peminjaman/update/' . $peminjaman['id_peminjaman']) ?>" method="post" class="form-main">
     <?= csrf_field() ?>
 
     <label>Peminjam</label>

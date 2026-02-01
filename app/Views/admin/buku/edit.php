@@ -8,7 +8,7 @@
     <p>Buku</p>
 </div>
 
-<form action="<?= base_url('admin/buku/update/' . $buku['id_buku']) ?>" method="post">
+<form action="<?= base_url('admin/buku/update/' . $buku['id_buku']) ?>" method="post" class="form-main">
     <?= csrf_field() ?>
 
     <div class="form-group">

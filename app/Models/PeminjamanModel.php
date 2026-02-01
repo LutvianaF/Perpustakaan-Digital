@@ -43,4 +43,23 @@ class PeminjamanModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+    public function getLaporan($tglPinjam = null, $tglKembali = null)
+    {
+        $builder = $this->db->table('peminjaman');
+        $builder->select('
+            peminjaman.*,
+            anggota.nama AS nama,
+            buku.judul_buku AS judul_buku
+        ');
+        $builder->join('anggota', 'anggota.id_anggota = peminjaman.id_anggota');
+        $builder->join('buku', 'buku.id_buku = peminjaman.id_buku');
+
+        if ($tglPinjam && $tglKembali) {
+            $builder->where('tanggal_pinjam >=', $tglPinjam);
+            $builder->where('tanggal_kembali <=', $tglKembali);
+        }
+
+        return $builder->get()->getResultArray();
+    }
 }

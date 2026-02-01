@@ -37,5 +37,9 @@ $routes->group('admin', function ($routes) {
     $routes->get('peminjaman/edit/(:num)', 'Admin\PeminjamanController::edit/$1');
     $routes->post('peminjaman/update/(:num)', 'Admin\PeminjamanController::update/$1');
     $routes->get('peminjaman/delete/(:num)', 'Admin\PeminjamanController::delete/$1');
+
+    $routes->get('laporan', 'Admin\LaporanController::index');
+    $routes->post('laporan/filter', 'Admin\LaporanController::filter');
+    $routes->get('laporan/cetak', 'Admin\LaporanController::cetak');
 });
 

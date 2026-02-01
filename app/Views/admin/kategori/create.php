@@ -8,7 +8,7 @@
     <p>Kagetori Buku</p>
 </div>
 
-<form action="<?= base_url('admin/kategori/store') ?>" method="post">
+<form action="<?= base_url('admin/kategori/store') ?>" method="post" class="form-main">
     <?= csrf_field() ?>
 
     <div class="form-group">

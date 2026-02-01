@@ -7,7 +7,7 @@
 <div class="caption-small">
     <p>Buku</p>
 </div>
-<form action="<?= base_url('admin/buku/store') ?>" method="post">
+<form action="<?= base_url('admin/buku/store') ?>" method="post" class="form-main">
     <?= csrf_field() ?>
 
     <div class="form-group">

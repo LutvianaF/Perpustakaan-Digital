@@ -8,7 +8,7 @@
     <p>Kategori Buku</p>
 </div>
 
-<form action="<?= base_url('admin/kategori/update/' . $kategori['id_kategori']) ?>" method="post">
+<form action="<?= base_url('admin/kategori/update/' . $kategori['id_kategori']) ?>" method="post" class="form-main">
     <?= csrf_field() ?>
 
     <div class="form-group">
